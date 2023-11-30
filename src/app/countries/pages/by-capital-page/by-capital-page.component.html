@@ -1,1 +1,10 @@
-<p>by-capital-page works!</p>
+<h2>Busqueda por Capital</h2>
+<search-box (onDebounce)="searchByCapital($event) "[initialValue]="initialValue"></search-box>
+<hr>
+<div class="row">
+  <div class="col">
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>
+
+

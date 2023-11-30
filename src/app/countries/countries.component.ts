@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ByCapitalPageComponent } from './pages/by-capital-page/by-capital-page.component';
@@ -14,7 +15,8 @@ import { CountryPageComponent } from './pages/country-page/country-page.componen
             ByCapitalPageComponent,
             ByCountryPageComponent,
             ByRegionPageComponent,
-            CountryPageComponent
+            CountryPageComponent,
+            HttpClientModule
           ],
   templateUrl: './countries.component.html',
   styles: ''

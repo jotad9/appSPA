@@ -1,1 +1,9 @@
-<p>by-country-page works!</p>
+<h2>Busqueda por País</h2>
+<search-box (onDebounce)="searchByCountry($event)" [initialValue]="initialValue"></search-box>
+<hr>
+<div class="row">
+  <div class="col">
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>
+

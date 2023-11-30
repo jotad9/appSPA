@@ -1,1 +1,50 @@
-<p>country-page works!</p>
+@if(country){
+  @defer () {
+    <div class="row">
+      <div class="col-12">
+        <h2>País: {{ country.translations['spa'].common }}</h2>
+      </div>
+    </div>
+    <hr>
+    <div class="row mt-3">
+      <div class="col-4">
+        <h3>Bandera</h3>
+        <img class="img-thumbnail" [src]="country.flags.svg" [alt]="country.name.common">
+      </div>
+
+      <div class="col mt-2">
+        <h3>Información</h3>
+        <ul class="list-group mt-2">
+          <li class="list-group-item ">
+            <strong>Codigo: </strong>{{country.cca3}}
+          </li>
+          <li class="list-group-item ">
+            <strong>Capital: </strong>{{country.capital}}
+          </li>
+          <li class="list-group-item">
+            <strong>Población: </strong>{{country.population | number}}
+          </li>
+          <li class="list-group-item">
+            <strong>Región: </strong>{{ country.region }}
+          </li>
+          <li class="list-group-item">
+            <strong>Pais independiente: </strong>{{ country.independent ? 'Si' : 'No' }}
+          </li>
+          <li class="list-group-item">
+            <strong>Area: </strong>{{ country.area | number }} km
+          </li>
+        </ul>
+      </div>
+    </div>
+  }@loading(minimum 0.8s) {
+
+    <div class="alert alert-info ">
+      <div class="col-12">
+        <h2>Espere por favor...</h2>
+      </div>
+    </div>
+  }
+
+
+}
+

@@ -10,7 +10,10 @@ import { RouterLink, RouterModule } from '@angular/router';
             RouterLink],
   templateUrl: './navbar.component.html',
   styles: `#tituloNav{
-    margin-right: 30%;
+    margin-right: 20%;
+  }
+  a{
+    font-size: 140%;
   }
   `
 })
